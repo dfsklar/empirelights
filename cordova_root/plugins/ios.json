@@ -1,0 +1,21 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-fcm": {
+            "PACKAGE_NAME": "com.sklardevelopment.empirelights"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.sklardevelopment.empirelights"
+        },
+        "cordova-plugin-firebase-realtime-database": {
+            "PACKAGE_NAME": "com.sklardevelopment.empirelights"
+        }
+    },
+    "dependent_plugins": {}
+}

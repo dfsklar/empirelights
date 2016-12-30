@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "709619528820",
+    "firebase_url": "https://empire-lights.firebaseio.com",
+    "project_id": "empire-lights",
+    "storage_bucket": "empire-lights.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:709619528820:android:53b3e610cd34096d",
+        "android_client_info": {
+          "package_name": "com.sklardevelopment.empirelights"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "709619528820-ra16qron37s3rim84tu5halaor6jh4i6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgExxS_fwUe2ELpJF5eJqFRZGGA6IZ12w"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

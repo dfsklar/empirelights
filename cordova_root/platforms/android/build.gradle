@@ -88,6 +88,9 @@ ext {
 }
 
 // PLUGIN GRADLE EXTENSIONS START
+apply from: "cordova-plugin-fcm/empirelights-FCMPlugin.gradle"
+apply from: "cordova-plugin-firebase-realtime-database/empirelights-build.gradle"
+apply from: "cordova-plugin-firebase-realtime-database/empirelights-build-extras.gradle"
 // PLUGIN GRADLE EXTENSIONS END
 
 def hasBuildExtras = file('build-extras.gradle').exists()
@@ -249,6 +252,14 @@ dependencies {
     // SUB-PROJECT DEPENDENCIES START
     debugCompile(project(path: "CordovaLib", configuration: "debug"))
     releaseCompile(project(path: "CordovaLib", configuration: "release"))
+    compile "com.google.android.gms:play-services-analytics:9.2.0"
+    compile "com.google.code.gson:gson:2.+"
+    compile "com.google.firebase:firebase-core:9.4.0"
+    compile "com.google.firebase:firebase-crash:9.4.0"
+    compile "com.google.firebase:firebase-config:9.4.0"
+    compile "com.google.firebase:firebase-auth:9.4.0"
+    compile "com.google.firebase:firebase-database:9.4.0"
+    compile "com.google.firebase:firebase-messaging:9.4.0"
     // SUB-PROJECT DEPENDENCIES END
 }
 

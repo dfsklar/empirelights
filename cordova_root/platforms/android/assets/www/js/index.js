@@ -19,6 +19,7 @@
 var app = {
     // Application Constructor
     initialize: function() {
+        window.emplite = {};
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
     },
 
@@ -28,6 +29,38 @@ var app = {
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
         this.receivedEvent('deviceready');
+        this.writeToConsole('hello');
+        var self = this;
+        FCMPlugin.getToken(
+            function(token){
+                console.log('GOOD TOKEN: ' + token);
+            },
+            function(err){
+                console.log('error retrieving token: ' + err);
+            }
+        );
+        var retval = FCMPlugin.subscribeToTopic('empirelights',
+            function(token){
+                self.writeToConsole('OKsubscribe - ' + token);
+            },
+            function(err){
+                self.writeToConsole('ERRsubscribe - ' + token);
+            }
+                                               );
+        FCMPlugin.onNotification(
+            function(data){
+                window.app.writeToConsole('Notification received');
+            },
+            function(msg){
+                window.app.writeToConsole('onNotif OK: ' + msg);
+            },
+            function(err){
+                self.writeToConsole('onNotif ERR: ' + err);
+            });
+    },
+
+    writeToConsole: function(txt) {
+        $('#console').append('\n' + txt);
     },
 
     // Update DOM on a Received Event
@@ -43,4 +76,5 @@ var app = {
     }
 };
 
+window.app = app;
 app.initialize();
