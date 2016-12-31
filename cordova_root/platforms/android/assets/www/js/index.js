@@ -57,6 +57,17 @@ var app = {
             function(err){
                 self.writeToConsole('onNotif ERR: ' + err);
             });
+
+        FCMPlugin.onDataValueChanged('/empire-lights',
+            function(data){
+                window.app.writeToConsole('DATA-CHANGE received');
+            },
+            function(msg){
+                window.app.writeToConsole('onDataC OK: ' + msg);
+            },
+            function(err){
+                self.writeToConsole('onDataC ERR: ' + err);
+            });
     },
 
     writeToConsole: function(txt) {

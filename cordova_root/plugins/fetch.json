@@ -14,13 +14,5 @@
         },
         "is_top_level": true,
         "variables": {}
-    },
-    "cordova-plugin-firebase-realtime-database": {
-        "source": {
-            "type": "registry",
-            "id": "cordova-plugin-firebase-realtime-database"
-        },
-        "is_top_level": true,
-        "variables": {}
     }
 }

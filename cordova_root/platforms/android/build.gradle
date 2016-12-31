@@ -89,8 +89,6 @@ ext {
 
 // PLUGIN GRADLE EXTENSIONS START
 apply from: "cordova-plugin-fcm/empirelights-FCMPlugin.gradle"
-apply from: "cordova-plugin-firebase-realtime-database/empirelights-build.gradle"
-apply from: "cordova-plugin-firebase-realtime-database/empirelights-build-extras.gradle"
 // PLUGIN GRADLE EXTENSIONS END
 
 def hasBuildExtras = file('build-extras.gradle').exists()

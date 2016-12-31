@@ -4,10 +4,6 @@
         <param name="android-package" value="com.gae.scaffolder.plugin.FCMPlugin" />
         <param name="onload" value="true" />
     </feature>
-    <feature name="FirebaseDatabasePlugin">
-        <param name="android-package" value="org.apache.cordova.firebase.FirebaseDatabasePlugin" />
-        <param name="onload" value="true" />
-    </feature>
     <name>EmpireLights</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
