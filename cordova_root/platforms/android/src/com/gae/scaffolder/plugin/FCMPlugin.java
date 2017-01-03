@@ -87,6 +87,9 @@ public class FCMPlugin extends CordovaPlugin {
 				cordova.getActivity().runOnUiThread(new Runnable() {
                         public void run() {
                             try{
+                                Log.d(TAG,"FirebaseDB: version 4pm");
+                                Log.d(TAG,"FirebaseDB: trying to add value listenter for: " + args.getString(0));
+                                // FirebaseDatabase.getInstance().getReference().getChild(args.getString(0)).addValueEventListener
                                 FirebaseDatabase.getInstance().getReference(args.getString(0)).addValueEventListener
                                     (
                                      new ValueEventListener() {
@@ -104,7 +107,7 @@ public class FCMPlugin extends CordovaPlugin {
                                          }
                                      });
                             } catch(Exception e) {
-                                Log.d(TAG,"\tError retrieving token");
+                                Log.d(TAG,"\tError registering value-changed callback");
                             }
                         }
 				});

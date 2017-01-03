@@ -58,7 +58,7 @@ var app = {
                 self.writeToConsole('onNotif ERR: ' + err);
             });
 
-        FCMPlugin.onDataValueChanged('/empire-lights',
+        FCMPlugin.onDataValueChanged('/honor',
             function(data){
                 window.app.writeToConsole('DATA-CHANGE received');
             },
